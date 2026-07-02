@@ -8,7 +8,7 @@ from typing import List, Dict
 app = FastAPI(
     title="DevOps Technical Assignment API",
     description="A production-ready FastAPI service designed for Cloud deployment, CI/CD, and performance load testing.",
-    version="1.0.0"
+    version="1.0.1"
 )
 
 # Simulated in-memory database

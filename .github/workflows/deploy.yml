@@ -37,7 +37,7 @@ jobs:
 
       - name: Run Unit Tests
         run: |
-          pytest app/test_main.py -v
+          python -m pytest app/test_main.py -v
 
   build-and-push:
     needs: test-and-lint

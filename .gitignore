@@ -1,0 +1,22 @@
+# Terraform files
+**/.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+*.pem
+
+# Python files
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+
+# Application Zip
+devops_assignment.zip
+
+# OS files
+.DS_Store
+Thumbs.db

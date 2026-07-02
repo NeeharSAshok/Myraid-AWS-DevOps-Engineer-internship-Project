@@ -6,7 +6,7 @@ This repository contains the complete codebase, infrastructure as code (IaC), CI
 
 ## 📺 Demo & Implementation Video
 
-Click the badge below to watch a 7-minute walkthrough of the AWS infrastructure, the CI/CD pipeline, and the performance load tests:
+Click the badge below to watch a walkthrough of the AWS infrastructure, the CI/CD pipeline, and the performance load tests:
 
 [![Watch the video](https://img.shields.io/badge/Google%20Drive-Watch%20Demo%20Video-blue?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/13EGQJB_0iXOiQh7Ap5axpv5VKjdo9Ujr/view?usp=sharing)
 

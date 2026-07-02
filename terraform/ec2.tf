@@ -61,6 +61,7 @@ resource "aws_instance" "app_server" {
               apt-get install -y docker-ce docker-ce-cli containerd.io
               systemctl start docker
               systemctl enable docker
+              usermod -aG docker ubuntu
 
               # Configure Nginx as Reverse Proxy
               cat << 'NGINX_CONF' > /etc/nginx/sites-available/default

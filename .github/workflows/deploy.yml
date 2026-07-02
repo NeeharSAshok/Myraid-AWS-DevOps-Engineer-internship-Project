@@ -88,20 +88,20 @@ jobs:
           envs: REGISTRY,IMAGE_NAME,GITHUB_SHA
           script: |
             # Log in to GitHub Container Registry inside EC2
-            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
+            echo "${{ secrets.GITHUB_TOKEN }}" | sudo docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
             
             # Convert image name to lowercase as required by Docker registry formats
             LOWERCASE_IMAGE=$(echo "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}" | tr '[:upper:]' '[:lower:]')
             
             # Stop existing container if running
-            docker stop fastapi-app || true
-            docker rm fastapi-app || true
+            sudo docker stop fastapi-app || true
+            sudo docker rm fastapi-app || true
             
             # Pull latest image
-            docker pull $LOWERCASE_IMAGE:main
+            sudo docker pull $LOWERCASE_IMAGE:main
             
             # Run container
-            docker run -d \
+            sudo docker run -d \
               --name fastapi-app \
               -p 8000:8000 \
               --restart always \
@@ -109,4 +109,4 @@ jobs:
               $LOWERCASE_IMAGE:main
               
             # Clean up dangling images
-            docker image prune -f
+            sudo docker image prune -f
